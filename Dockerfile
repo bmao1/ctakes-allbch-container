@@ -17,7 +17,7 @@ COPY covid.bsv /ctakes/resources/org/apache/ctakes/dictionary/lookup/fast/
 COPY covid.xml /ctakes/ctakes-web-rest/src/main/resources/org/apache/ctakes/dictionary/lookup/fast/
 COPY pom.xml /ctakes
 
-COPY CovidPipelineContext.piper /ctakes/ctakes-web-rest/src/main/resources/pipers/Default.piper
+COPY CovidPipeline.piper /ctakes/ctakes-web-rest/src/main/resources/pipers/Default.piper
 
 # recompile, hopefully this part takes less time
 WORKDIR /ctakes
