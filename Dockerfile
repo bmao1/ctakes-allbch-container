@@ -22,8 +22,10 @@ COPY CovidPipeline.piper /ctakes/ctakes-web-rest/src/main/resources/pipers/Defau
 # recompile, hopefully this part takes less time
 WORKDIR /ctakes
 
-RUN mvn compile -pl '!ctakes-distribution' -pl '!ctakes-temporal' -pl '!ctakes-dictionary-lookup-res' -pl '!ctakes-dependency-parser-res-clear' -pl '!ctakes-lvg-res' -DskipTests
-RUN mvn install -pl '!ctakes-distribution' -pl '!ctakes-temporal' -pl '!ctakes-dictionary-lookup-res' -pl '!ctakes-dependency-parser-res-clear' -pl '!ctakes-lvg-res' -DskipTests
+#RUN mvn compile -pl '!ctakes-distribution' -pl '!ctakes-temporal' -pl '!ctakes-dictionary-lookup-res' -pl '!ctakes-dependency-parser-res-clear' -pl '!ctakes-lvg-res' -DskipTests
+#RUN mvn install -pl '!ctakes-distribution' -pl '!ctakes-temporal' -pl '!ctakes-dictionary-lookup-res' -pl '!ctakes-dependency-parser-res-clear' -pl '!ctakes-lvg-res' -DskipTests
+RUN mvn compile -pl '!ctakes-distribution' -DskipTests
+RUN mvn install -pl '!ctakes-distribution' -DskipTests
 
 WORKDIR /
 RUN mv /ctakes/ctakes-web-rest/target/ctakes-web-rest.war /apache-tomcat-9.0.21/webapps/
