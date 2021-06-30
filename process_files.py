@@ -5,6 +5,7 @@ import sys
 def main(args):
     if len(args) < 2:
         sys.stderr.write('Required arg(s): <input filenames file> <output directory>\n')
+        sys.exit(-1)
 
     url = 'http://localhost:8080/ctakes-web-rest/service/analyze'
 
