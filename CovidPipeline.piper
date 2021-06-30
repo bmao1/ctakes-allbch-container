@@ -1,7 +1,10 @@
 // Commands and parameters to create a default plaintext document processing pipeline with UMLS lookup
 
 // Load a simple token processing pipeline from another pipeline file
-load DefaultTokenizerPipeline
+//load DefaultTokenizerPipeline
+add SimpleSegmentAnnotator
+add SentenceDetectorAnnotatorBIO isTraining=false classifierJarPath=/org/apache/ctakes/core/sentdetect/model.jar FeatureConfiguration=CHAR
+add TokenizerAnnotatorPTB
 
 // Add non-core annotators
 add ContextDependentTokenizerAnnotator
@@ -11,9 +14,10 @@ addDescription POSTagger
 load TsChunkerSubPipe
 
 // load dictionary with covid lookup descriptor (covid terminology + snomed + rxnorm)
-add DefaultJCasTermAnnotator LookupXml=/org/apache/ctakes/dictionary/lookup/fast/covid.xml
+#add DefaultJCasTermAnnotator LookupXml=/org/apache/ctakes/dictionary/lookup/fast/covid.xml
+add DefaultJCasTermAnnotator 
 
-add ContextAnnotator
+addLogged ContextAnnotator
 
 // Add Cleartk Entity Attribute annotators
 //load AttributeCleartkSubPipe

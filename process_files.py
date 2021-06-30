@@ -1,6 +1,8 @@
 import json
+import os
 import requests
 import sys
+from os.path import join
 
 def main(args):
     if len(args) < 2:
@@ -10,9 +12,10 @@ def main(args):
     url = 'http://localhost:8080/ctakes-web-rest/service/analyze'
 
     with open(args[0], 'rt') as f:
-        filenames = f.read()
+        filenames = f.readlines()
 
     for fn in filenames:
+        fn = fn.rstrip()
         basename = os.path.basename(fn)[:-4]
 
         json_fn = fn.replace('.txt', '.json')

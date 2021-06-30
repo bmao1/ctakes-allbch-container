@@ -13,8 +13,8 @@ RUN unzip -q apache-tomcat-9.0.21.zip
 RUN svn export https://svn.apache.org/repos/asf/ctakes/trunk@1890898 ctakes
 
 WORKDIR /
-COPY covid.bsv /ctakes/resources/org/apache/ctakes/dictionary/lookup/fast/
-COPY covid.xml /ctakes/ctakes-web-rest/src/main/resources/org/apache/ctakes/dictionary/lookup/fast/
+#COPY covid.bsv /ctakes/resources/org/apache/ctakes/dictionary/lookup/fast/
+#COPY covid.xml /ctakes/ctakes-web-rest/src/main/resources/org/apache/ctakes/dictionary/lookup/fast/
 COPY pom.xml /ctakes
 
 COPY CovidPipeline.piper /ctakes/ctakes-web-rest/src/main/resources/pipers/Default.piper
