@@ -6,7 +6,7 @@ aws=/usr/local/bin/aws
 s3_bucket=`$aws ec2 describe-tags --filters Name=key,Values=s3_bucket | jq --raw-output '.Tags[0].Value'`
 s3_input_path=`$aws ec2 describe-tags --filters Name=key,Values=s3_in | jq --raw-output '.Tags[0].Value'`
 
-$aws s3 cp s3://${s3_bucket}/${s3_input_path} /data/
+$aws s3 cp --recursive s3://${s3_bucket}/${s3_input_path} /data/
 
 cd /data
 for fn in *.csv.encrypted; do
