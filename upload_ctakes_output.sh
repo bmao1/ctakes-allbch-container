@@ -12,3 +12,8 @@ for fn in $1/*.json; do
     $aws s3 cp $fn.encrypted s3://$s3_bucket/$s3_output_path/ --sse aws:kms --sse-kms-key-id $keyId
 done
 
+for fn in $1/*.csv; do
+    aws-encryption-cli --encrypt --input $fn --wrapping-keys key=$keyId --encryption-context purpose=test --metadata-output `basename $fn`.metadata --output $fn.encrypted
+    $aws s3 cp $fn.encrypted s3://$s3_bucket/$s3_output_path/ --sse aws:kms --sse-kms-key-id $keyId
+done
+

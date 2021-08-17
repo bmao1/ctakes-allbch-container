@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import requests
@@ -16,7 +17,7 @@ def worker(url, input_queue, output_queue):
         try:
             r = requests.post(url, data=text, params={'format':'full'})
             if r.status_code == 200:
-                output = r.json()
+                output = r.json()['_views']['_InitialView']
                 output['metadata'] = metadata
         except:
             sys.stderr.write("Error processing instance num %s\n" % (inst_num,) )
@@ -39,6 +40,23 @@ def write_worker(num_jobs, done_queue):
 
                 with open(output_fn, 'wt') as of:
                     of.write(json.dumps(output))
+
+                output_fn = output_fn.replace('.json', '.csv')
+                with open(output_fn, 'wt') as of:
+                    writer = csv.writer(of) 
+                    metadata = output['metadata']
+                    pt_num = metadata['PATIENT_NUM']
+                    start_date = metadata['START_DATE']
+                    for sem_type in output.keys():
+                        for ent in output[sem_type]:
+                            if 'ontologyConceptArr' in ent:
+                                polarity = 'Asserted' if ent['polarity'] == 0 else 'Negated'
+                                for concept in ent['ontologyConceptArr']:
+                                    cui = concept['cui']
+                                    pt = concept['preferredText']
+                                    tui = concept['tui']
+                                    
+                                    writer.writerow([pt_num, cui, tui, '', polarity , start_date])
 
             # update progress bar every time even if the output was bad
             pbar.update()
