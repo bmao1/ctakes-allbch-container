@@ -10,7 +10,7 @@ from multiprocessing import Process, Queue
 from threading import Thread
 STARTING_PORT_NUM = 8080
 
-def read_sem_types():
+def read_sem_types(fn):
     st_to_path = {}
     with open(fn, 'rt') as f:
         for line in f.readlines():
@@ -68,9 +68,9 @@ def write_worker(num_jobs, done_queue):
                                     pt = concept['preferredText']
                                     tui = concept['tui']
                                     sem_type_path = tui_to_path[tui]
-                                    full_path = '/'.join(sem_type_path, '%s-%s' % (cui, pt.replace(' ','_'))
+                                    full_path = '/'.join([sem_type_path, '%s-%s' % (cui, pt)]).replace(' ', '_')
                                     
-                                    writer.writerow([pt_num, full_path, tui, '', polarity , start_date])
+                                    writer.writerow([pt_num, full_path, '', polarity, start_date])
 
             # update progress bar every time even if the output was bad
             pbar.update()
