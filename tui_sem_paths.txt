@@ -1,0 +1,127 @@
+T001	/Physical Object/Organism
+T002	/Physical Object/Organism/Eukaryote/Plant
+T004	/Physical Object/Organism/Eukaryote/Fungus
+T005	/Physical Object/Organism/Virus
+T007	/Physical Object/Organism/Bacterium
+T008	/Physical Object/Organism/Eukaryote/Animal
+T010	/Physical Object/Organism/Eukaryote/Animal/Vertebrate
+T011	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Amphibian
+T012	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Bird
+T013	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Fish
+T014	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Reptile
+T015	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Mammal
+T016	/Physical Object/Organism/Eukaryote/Animal/Vertebrate/Mammal/Human
+T017	/Physical Object/Anatomical Structure
+T018	/Physical Object/Anatomical Structure/Embryonic Structure
+T019	/Physical Object/Anatomical Structure/Anatomical Abnormality/Congenital Abnormality
+T020	/Physical Object/Anatomical Structure/Anatomical Abnormality/Acquired Abnormality
+T021	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure
+T022	/Conceptual Entity/Idea or Concept/Functional Concept/Body System
+T023	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure/Body Part, Organ, or Organ Component
+T024	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure/Tissue
+T025	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure/Cell
+T026	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure/Cell Component
+T028	/Physical Object/Anatomical Structure/Fully Formed Anatomical Structure/Gene or Genome
+T029	/Conceptual Entity/Idea or Concept/Spatial Concept/Body Location or Region
+T030	/Conceptual Entity/Idea or Concept/Spatial Concept/Body Space or Junction
+T031	/Physical Object/Substance/Body Substance
+T032	/Conceptual Entity/Organism Attribute
+T033	/Conceptual Entity/Finding
+T034	/Conceptual Entity/Finding/Laboratory or Test Result
+T037	/Phenomenon or Process/Injury or Poisoning
+T038	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function
+T039	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function
+T040	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Organism Function
+T041	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Organism Function/Mental Process
+T042	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Organ or Tissue Function
+T043	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Cell Function
+T044	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Molecular Function
+T045	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Physiologic Function/Molecular Function/Genetic Function
+T046	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function
+T047	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function/Disease or Syndrome
+T048	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function/Disease or Syndrome/Mental or Behavioral Dysfunction
+T049	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function/Cell or Molecular Dysfunction
+T050	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function/Experimental Model of Disease
+T051	/Event
+T052	/Activity
+T053	/Activity/Behavior
+T054	/Activity/Behavior/Social Behavior
+T055	/Activity/Behavior/Individual Behavior
+T056	/Activity/Daily or Recreational Activity
+T057	/Activity/Occupational Activity
+T058	/Activity/Occupational Activity/Health Care Activity
+T059	/Activity/Occupational Activity/Health Care Activity/Laboratory Procedure
+T060	/Activity/Occupational Activity/Health Care Activity/Diagnostic Procedure
+T061	/Activity/Occupational Activity/Health Care Activity/Therapeutic or Preventive Procedure
+T062	/Activity/Occupational Activity/Research Activity
+T063	/Activity/Occupational Activity/Research Activity/Molecular Biology Research Technique
+T064	/Activity/Occupational Activity/Governmental or Regulatory Activity
+T065	/Activity/Occupational Activity/Educational Activity
+T066	/Activity/Machine Activity
+T067	/Phenomenon or Process
+T068	/Phenomenon or Process/Human-caused Phenomenon or Process
+T069	/Phenomenon or Process/Human-caused Phenomenon or Process/Environmental Effect of Humans
+T070	/Phenomenon or Process/Natural Phenomenon or Process
+T071	/Entity
+T072	/Physical Object
+T073	/Physical Object/Manufactured Object
+T074	/Physical Object/Manufactured Object/Medical Device
+T075	/Physical Object/Manufactured Object/Research Device
+T077	/Conceptual Entity
+T078	/Conceptual Entity/Idea or Concept
+T079	/Conceptual Entity/Idea or Concept/Temporal Concept
+T080	/Conceptual Entity/Idea or Concept/Qualitative Concept
+T081	/Conceptual Entity/Idea or Concept/Quantitative Concept
+T082	/Conceptual Entity/Idea or Concept/Spatial Concept
+T083	/Conceptual Entity/Idea or Concept/Spatial Concept/Geographic Area
+T085	/Conceptual Entity/Idea or Concept/Spatial Concept/Molecular Sequence
+T086	/Conceptual Entity/Idea or Concept/Spatial Concept/Molecular Sequence/Nucleotide Sequence
+T087	/Conceptual Entity/Idea or Concept/Spatial Concept/Molecular Sequence/Amino Acid Sequence
+T088	/Conceptual Entity/Idea or Concept/Spatial Concept/Molecular Sequence/Carbohydrate Sequence
+T089	/Conceptual Entity/Intellectual Product/Regulation or Law
+T090	/Conceptual Entity/Occupation or Discipline
+T091	/Conceptual Entity/Occupation or Discipline/Biomedical Occupation or Discipline
+T092	/Conceptual Entity/Organization
+T093	/Conceptual Entity/Organization/Health Care Related Organization
+T094	/Conceptual Entity/Organization/Professional Society
+T095	/Conceptual Entity/Organization/Self-help or Relief Organization
+T096	/Conceptual Entity/Group
+T097	/Conceptual Entity/Group/Professional or Occupational Group
+T098	/Conceptual Entity/Group/Population Group
+T099	/Conceptual Entity/Group/Family Group
+T100	/Conceptual Entity/Group/Age Group
+T101	/Conceptual Entity/Group/Patient or Disabled Group
+T102	/Conceptual Entity/Group Attribute
+T103	/Physical Object/Substance/Chemical
+T104	/Physical Object/Substance/Chemical/Chemical Viewed Structurally
+T109	/Physical Object/Substance/Chemical/Chemical Viewed Structurally/Organic Chemical
+T114	/Physical Object/Substance/Chemical/Chemical Viewed Structurally/Organic Chemical/Nucleic Acid, Nucleoside, or Nucleotide
+T116	/Physical Object/Substance/Chemical/Chemical Viewed Structurally/Organic Chemical/Amino Acid, Peptide, or Protein
+T120	/Physical Object/Substance/Chemical/Chemical Viewed Functionally
+T121	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Pharmacologic Substance
+T122	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biomedical or Dental Material
+T123	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance
+T125	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance/Hormone
+T126	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance/Enzyme
+T127	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance/Vitamin
+T129	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance/Immunologic Factor
+T130	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Indicator, Reagent, or Diagnostic Aid
+T131	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Hazardous or Poisonous Substance
+T167	/Physical Object/Substance
+T168	/Physical Object/Substance/Food
+T169	/Conceptual Entity/Idea or Concept/Functional Concept
+T170	/Conceptual Entity/Intellectual Product
+T171	/Conceptual Entity/Language
+T184	/Conceptual Entity/Finding/Sign or Symptom
+T185	/Conceptual Entity/Intellectual Product/Classification
+T190	/Physical Object/Anatomical Structure/Anatomical Abnormality
+T191	/Phenomenon or Process/Natural Phenomenon or Process/Biologic Function/Pathologic Function/Disease or Syndrome/Neoplastic Process
+T192	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Biologically Active Substance/Receptor
+T194	/Physical Object/Organism/Archaeon
+T195	/Physical Object/Substance/Chemical/Chemical Viewed Functionally/Pharmacologic Substance/Antibiotic
+T196	/Physical Object/Substance/Chemical/Chemical Viewed Structurally/Element, Ion, or Isotope
+T197	/Physical Object/Substance/Chemical/Chemical Viewed Structurally/Inorganic Chemical
+T200	/Physical Object/Manufactured Object/Clinical Drug
+T201	/Conceptual Entity/Organism Attribute/Clinical Attribute
+T203	/Physical Object/Manufactured Object/Medical Device/Drug Delivery Device
+T204	/Physical Object/Organism/Eukaryote
