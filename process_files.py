@@ -68,9 +68,9 @@ def write_worker(num_jobs, done_queue):
                                     pt = concept['preferredText']
                                     tui = concept['tui']
                                     sem_type_path = tui_to_path[tui]
-                                    full_path = '/'.join([sem_type_path, '%s-%s' % (cui, pt)]).replace(' ', '_')
+                                    full_path = '/'.join([sem_type_path, pt]).replace(' ', '_')
                                     
-                                    writer.writerow([pt_num, full_path, '', polarity, start_date])
+                                    writer.writerow([pt_num, full_path, pt, polarity, start_date])
 
             # update progress bar every time even if the output was bad
             pbar.update()
