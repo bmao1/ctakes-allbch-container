@@ -10,7 +10,7 @@ $aws s3 cp --recursive s3://${s3_bucket}/${s3_input_path} /data/
 
 cd /data
 for fn in *.csv*encrypted; do
-  of=${fn%.*}
+  of=${fn%%.*}.csv
   aws-encryption-cli --decrypt --input $fn --encryption-context purpose=test --metadata-output $of.metadata --output $of --discovery true
 done
 
