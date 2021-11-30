@@ -5,7 +5,7 @@ aws=/usr/local/bin/aws
 
 s3_bucket=`$aws ec2 describe-tags --filters Name=key,Values=s3_bucket | jq --raw-output '.Tags[0].Value'`
 s3_output_path=`$aws ec2 describe-tags --filters Name=key,Values=s3_out | jq --raw-output '.Tags[0].Value'`
-keyId=$($aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:718952877825:secret:master-fWTVY2 --output text --query SecretString | jq --raw-output '."$2-s3"')
+keyId=$($aws secretsmanager get-secret-value --secret-id arn:aws:secretsmanager:us-east-1:718952877825:secret:master-fWTVY2 --output text --query SecretString | jq --raw-output '."'$2'-kms-s3"')
 
 for fn in $1/*.json; do
     aws-encryption-cli --encrypt --input $fn --wrapping-keys key=$keyId --encryption-context purpose=test --metadata-output `basename $fn`.metadata --output $fn.encrypted
