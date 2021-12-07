@@ -35,7 +35,7 @@ def worker(url, input_queue, output_queue):
             sys.stderr.write("Error processing instance num %s\n" % (inst_num,) )
             output = None
 
-        output_queue.put( (output, output_fn) )
+        output_queue.put( (output, output_fn, text) )
 
 def write_worker(num_jobs, done_queue):
     # num_jobs is our intended number of jobs but if the DB doens't have that many
@@ -43,7 +43,7 @@ def write_worker(num_jobs, done_queue):
 
     with tqdm.tqdm(total=num_jobs) as pbar:
         while True:
-            output, output_fn = done_queue.get()
+            output, output_fn, text = done_queue.get()
 
             if not output is None:
                 # error during processing
@@ -65,7 +65,7 @@ def write_worker(num_jobs, done_queue):
                                 polarity = 'Asserted' if ent['polarity'] == 0 else 'Negated'
                                 for concept in ent['ontologyConceptArr']:
                                     cui = concept['cui']
-                                    pt = concept['preferredText']
+                                    pt = concept.get('preferredText', text[ent['begin']:ent['end']])
                                     tui = concept['tui']
                                     sem_type_path = tui_to_path[tui]
                                     full_path = '/'.join([sem_type_path, pt]).replace(' ', '_')
